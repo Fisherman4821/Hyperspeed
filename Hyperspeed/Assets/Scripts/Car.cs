@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Car : MonoBehaviour
 {
@@ -33,8 +34,9 @@ public class Car : MonoBehaviour
     }
     void FixedUpdate()
     {
-        colliderBL.motorTorque = acceleration * Input.GetAxis("Vertical");
-        colliderBR.motorTorque = acceleration * Input.GetAxis("Vertical");
+        float vIn = Input.GetAxis("Vertical");
+        colliderBL.motorTorque = acceleration * vIn;
+        colliderBR.motorTorque = acceleration * vIn;
 
         colliderFL.steerAngle = maxAngle * Input.GetAxis("Horizontal");
         colliderFR.steerAngle = maxAngle * Input.GetAxis("Horizontal");
