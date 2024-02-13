@@ -1433,8 +1433,8 @@
     "m_ShaderOutputName": "Frequency",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 5.0,
-        "y": 5.0
+        "x": 200.0,
+        "y": 200.0
     },
     "m_DefaultValue": {
         "x": 0.0,

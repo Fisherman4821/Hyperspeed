@@ -1304,7 +1304,7 @@ MonoBehaviour:
   wheelFR: {fileID: 2082502377}
   wheelBL: {fileID: 589926979}
   wheelBR: {fileID: 997757947}
-  acceleration: 15.23
+  acceleration: 3000
   maxSpeed: 0
   maxAngle: 0
 --- !u!65 &2027541270
