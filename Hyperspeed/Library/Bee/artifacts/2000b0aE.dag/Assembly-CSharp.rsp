@@ -343,6 +343,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.11f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Car.cs"
 "Assets/Scripts/Ground.cs"
+"Assets/Scripts/LevelOneSelect.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/StartGame.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
