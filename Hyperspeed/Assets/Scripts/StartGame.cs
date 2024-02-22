@@ -6,6 +6,6 @@ public class MainMenu : MonoBehaviour
 {
     public void playButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level Select Screen");
     }
 }
