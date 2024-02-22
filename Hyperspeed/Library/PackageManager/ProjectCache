@@ -5,26 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
-      ticks: 638442199444914442
+      ticks: 638442307535450630
     m_Hash: 1947480821
-=======
-      ticks: 638434541789708232
-    m_Hash: 3907681255
->>>>>>> Stashed changes
   m_LockFileStatus:
     m_FilePath: C:/github/Hyperspeed/Hyperspeed/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< Updated upstream
-      ticks: 638442199444914442
+      ticks: 638442307535450630
     m_Hash: 3122452671
-=======
-      ticks: 638434541789708232
-    m_Hash: 1992656719
->>>>>>> Stashed changes
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -575,7 +565,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.4.0
   source: 1
-  resolvedPath: C:\TSA_7th_Game\Hyperspeed\Hyperspeed\Library\PackageCache\com.unity.splines@2.4.0
+  resolvedPath: C:\github\Hyperspeed\Hyperspeed\Library\PackageCache\com.unity.splines@2.4.0
   assetPath: Packages/com.unity.splines
   name: com.unity.splines
   displayName: Splines
@@ -3300,7 +3290,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.1
   source: 1
-  resolvedPath: C:\TSA_7th_Game\Hyperspeed\Hyperspeed\Library\PackageCache\com.unity.settings-manager@2.0.1
+  resolvedPath: C:\github\Hyperspeed\Hyperspeed\Library\PackageCache\com.unity.settings-manager@2.0.1
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
