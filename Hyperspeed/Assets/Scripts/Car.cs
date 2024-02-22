@@ -1,7 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Car : MonoBehaviour
 {
@@ -10,13 +10,14 @@ public class Car : MonoBehaviour
     public GameObject wheelBL;
     public GameObject wheelBR;
 
+    public float friction;
     public float acceleration;
     public float reverse;
     public float brake;
     public float maxSpeed;
-    public float steeringBrakingMult;
-    public float maxAngle;
-    public float friction;
+    public float brakingAngle;
+    public float normalAngle;
+    public float steeringForce;
 
     Rigidbody rb;
 
@@ -25,6 +26,7 @@ public class Car : MonoBehaviour
     WheelCollider colliderBL;
     WheelCollider colliderBR;
 
+    
 
     void Start()
     {
@@ -41,19 +43,21 @@ public class Car : MonoBehaviour
     }
     void FixedUpdate()
     {
+        rb.AddForce(new Vector3(friction - rb.velocity.x, 0, friction - rb.velocity.z));
+
         float vIn = Input.GetAxis("Vertical");
         bool spacePressed = Input.GetAxis("Jump") > 0 ? true : false;
-        if (vIn == 0 || rb.velocity.magnitude > maxSpeed)
+        if ((vIn == 0) || (rb.velocity.magnitude > maxSpeed))
         {
-            colliderBL.motorTorque = 0;
-            colliderBR.motorTorque = 0;
+            colliderBL.motorTorque = 0.0f;
+            colliderBR.motorTorque = 0.0f;
         }
         else
         {
-            colliderBL.motorTorque = spacePressed ? 0 : vIn < 0 ? reverse * vIn : acceleration * vIn;
-            colliderBR.motorTorque = spacePressed ? 0 : vIn < 0 ? reverse * vIn : acceleration * vIn;
+            colliderBL.motorTorque = spacePressed ? 0.0f : Mathf.Sign(vIn) == -1 ? reverse * vIn : acceleration * vIn;
+            colliderBR.motorTorque = spacePressed ? 0.0f : Mathf.Sign(vIn) == -1 ? reverse * vIn : acceleration * vIn;
         }
-
+        
         if (spacePressed)
         {
             colliderBL.brakeTorque = brake * 0.7f;
@@ -62,15 +66,16 @@ public class Car : MonoBehaviour
             colliderFR.brakeTorque = brake * 0.3f;
         } else
         {
-            colliderBL.brakeTorque = 0;
-            colliderBR.brakeTorque = 0;
-            colliderFL.brakeTorque = 0;
-            colliderFR.brakeTorque = 0;
+            colliderBL.brakeTorque = 0.0f;
+            colliderBR.brakeTorque = 0.0f;
+            colliderFL.brakeTorque = 0.0f;
+            colliderFR.brakeTorque = 0.0f;
         }
 
-        colliderFL.steerAngle = maxAngle * Input.GetAxis("Horizontal") * (spacePressed ? steeringBrakingMult : 1);
-        colliderFR.steerAngle = maxAngle * Input.GetAxis("Horizontal") * (spacePressed ? steeringBrakingMult : 1);
+        colliderFL.steerAngle = Input.GetAxis("Horizontal") * (spacePressed ? brakingAngle : normalAngle);
+        colliderFL.steerAngle = Input.GetAxis("Horizontal") * (spacePressed ? brakingAngle : normalAngle);
+        rb.AddRelativeTorque(new Vector3(0, Input.GetAxis("Horizontal") * (spacePressed ? brakingAngle : normalAngle) * (rb.velocity.magnitude / maxSpeed) * steeringForce, 0));
 
-        print(rb.velocity.magnitude);
+        print(vIn + "\t" + rb.velocity.magnitude + "\t" + ((vIn == 0) || (rb.velocity.magnitude > maxSpeed)) + "\t" + colliderBL.motorTorque + "\t" + colliderBL.brakeTorque);
     }
 }
