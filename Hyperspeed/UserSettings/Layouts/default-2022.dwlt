@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 97
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 2198
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -363,9 +363,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4e740000
-      m_LastClickedID: 29774
-      m_ExpandedIDs: 66b1ffff82b2ffff44b3ffffd0b4ffffccedffff26f2ffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b2d4ffff9ed5ffffeeeeffffbaefffffeef1ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -778,7 +778,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: -260, y: -128}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
@@ -798,9 +798,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -795.1631, y: -140.00488, z: 64.43878}
+    m_Target: {x: 943.68396, y: -1227.2783, z: 550.91095}
     speed: 2
-    m_Value: {x: -795.1631, y: -140.00488, z: 64.43878}
+    m_Value: {x: 943.68396, y: -1227.2783, z: 550.91095}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -846,13 +846,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.2678514, y: 0.53342456, z: -0.18290392, w: -0.7812196}
+    m_Target: {x: -0.35401326, y: -0.4838669, z: 0.2225836, w: -0.76885897}
     speed: 2
-    m_Value: {x: -0.26901698, y: 0.53313786, z: -0.18369985, w: -0.78079975}
+    m_Value: {x: -0.35316736, y: -0.48301187, z: 0.22131239, w: -0.7700606}
   m_Size:
-    m_Target: 1386.8762
+    m_Target: 882.16455
     speed: 2
-    m_Value: 1327.1543
+    m_Value: 882.16455
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1610,30 +1610,30 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Hyperspeed\Hyperspeed\Hyperspeed
+  m_LastProjectPath: C:\TSA_7th_Game\Hyperspeed\Hyperspeed
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 746e0000
-    m_LastClickedID: 28276
-    m_ExpandedIDs: 00000000666e000000ca9a3bffffff7f
+    m_SelectedIDs: a66e0000
+    m_LastClickedID: 28326
+    m_ExpandedIDs: 00000000966e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Music
+      m_OriginalName: Music
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11636
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1645,7 +1645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000666e0000
+    m_ExpandedIDs: 00000000966e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

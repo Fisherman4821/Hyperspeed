@@ -347,6 +347,7 @@
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/LevelOneSelect.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Respawn Trigger.cs"
 "Assets/Scripts/road.cs"
 "Assets/Scripts/StartGame.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
