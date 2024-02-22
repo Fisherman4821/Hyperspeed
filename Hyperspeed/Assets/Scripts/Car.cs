@@ -11,8 +11,14 @@ public class Car : MonoBehaviour
     public GameObject wheelBR;
 
     public float acceleration;
+    public float reverse;
+    public float brake;
     public float maxSpeed;
+    public float steeringBrakingMult;
     public float maxAngle;
+    public float friction;
+
+    Rigidbody rb;
 
     WheelCollider colliderFL;
     WheelCollider colliderFR;
@@ -22,6 +28,7 @@ public class Car : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         colliderFL = wheelFL.GetComponent<WheelCollider>();
         colliderFR = wheelFR.GetComponent<WheelCollider>();
         colliderBL = wheelBL.GetComponent<WheelCollider>();
@@ -35,10 +42,35 @@ public class Car : MonoBehaviour
     void FixedUpdate()
     {
         float vIn = Input.GetAxis("Vertical");
-        colliderBL.motorTorque = acceleration * vIn;
-        colliderBR.motorTorque = acceleration * vIn;
+        bool spacePressed = Input.GetAxis("Jump") > 0 ? true : false;
+        if (vIn == 0 || rb.velocity.magnitude > maxSpeed)
+        {
+            colliderBL.motorTorque = 0;
+            colliderBR.motorTorque = 0;
+        }
+        else
+        {
+            colliderBL.motorTorque = spacePressed ? 0 : vIn < 0 ? reverse * vIn : acceleration * vIn;
+            colliderBR.motorTorque = spacePressed ? 0 : vIn < 0 ? reverse * vIn : acceleration * vIn;
+        }
 
-        colliderFL.steerAngle = maxAngle * Input.GetAxis("Horizontal");
-        colliderFR.steerAngle = maxAngle * Input.GetAxis("Horizontal");
+        if (spacePressed)
+        {
+            colliderBL.brakeTorque = brake * 0.7f;
+            colliderBR.brakeTorque = brake * 0.7f;
+            colliderFL.brakeTorque = brake * 0.3f;
+            colliderFR.brakeTorque = brake * 0.3f;
+        } else
+        {
+            colliderBL.brakeTorque = 0;
+            colliderBR.brakeTorque = 0;
+            colliderFL.brakeTorque = 0;
+            colliderFR.brakeTorque = 0;
+        }
+
+        colliderFL.steerAngle = maxAngle * Input.GetAxis("Horizontal") * (spacePressed ? steeringBrakingMult : 1);
+        colliderFR.steerAngle = maxAngle * Input.GetAxis("Horizontal") * (spacePressed ? steeringBrakingMult : 1);
+
+        print(rb.velocity.magnitude);
     }
 }
