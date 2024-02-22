@@ -76,6 +76,6 @@ public class Car : MonoBehaviour
         colliderFL.steerAngle = Input.GetAxis("Horizontal") * (spacePressed ? brakingAngle : normalAngle);
         rb.AddRelativeTorque(new Vector3(0, Input.GetAxis("Horizontal") * (spacePressed ? brakingAngle : normalAngle) * (rb.velocity.magnitude / maxSpeed) * steeringForce, 0));
 
-        print(vIn + "\t" + rb.velocity.magnitude + "\t" + ((vIn == 0) || (rb.velocity.magnitude > maxSpeed)) + "\t" + colliderBL.motorTorque + "\t" + colliderBL.brakeTorque);
+        //print(vIn + "\t" + rb.velocity.magnitude + "\t" + ((vIn == 0) || (rb.velocity.magnitude > maxSpeed)) + "\t" + colliderBL.motorTorque + "\t" + colliderBL.brakeTorque);
     }
 }
